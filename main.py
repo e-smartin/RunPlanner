@@ -7,8 +7,10 @@ def main():
     except: 
         print("Introduce valid parameters")
         exit(1)
-    
-    if (desiredMark <= initialMark):
+    if initialMark <= 0:
+        print("Your initial distance should be > 0, it is recommended that you run 7 days before introducing your initial distance")
+        exit()
+    if desiredMark <= initialMark :
         print("You already achieved that mark")
         exit()
     x = np.arange(365)
